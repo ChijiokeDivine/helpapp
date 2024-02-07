@@ -100,8 +100,31 @@ const observerer = new IntersectionObserver((entries) => {
      
   });
 });
+const observ = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting){
+          entry.target.classList.add('visible-link');
+      }
+     
+  });
+});
+const obser = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting){
+          entry.target.classList.add('visible-link');
+      }
+     
+  });
+});
 
 const hiddenElements = document.querySelectorAll("[show]");
 hiddenElements.forEach((el) => observer.observe(el));
 const hiddenElement = document.querySelectorAll("[see]");
 hiddenElement.forEach((el) => observerer.observe(el));
+const hiddenElemen = document.querySelectorAll("[goLeft]");
+hiddenElemen.forEach((el) => observ.observe(el));
+
+const hiddenEleme = document.querySelectorAll("[goRight]");
+hiddenEleme.forEach((el) => obser.observe(el));
