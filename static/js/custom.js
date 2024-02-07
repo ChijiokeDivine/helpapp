@@ -78,3 +78,30 @@ $('#waitlistForm').on('submit', function(e) {
       }
   });
 });
+
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting){
+          entry.target.classList.add('visible-link');
+      }
+      // else{
+      //     entry.target.classList.remove('visible-link');
+      // }
+  });
+});
+const observerer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting){
+          entry.target.classList.add('visible-link');
+      }
+     
+  });
+});
+
+const hiddenElements = document.querySelectorAll("[show]");
+hiddenElements.forEach((el) => observer.observe(el));
+const hiddenElement = document.querySelectorAll("[see]");
+hiddenElement.forEach((el) => observerer.observe(el));
