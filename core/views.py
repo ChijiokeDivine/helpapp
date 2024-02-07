@@ -6,7 +6,7 @@ from django.http import JsonResponse
 
 
 def index(request):
-    email_submitted = WaitlistEmail.objects.all().count
+    email_submitted = WaitlistEmail.objects.all().count() + 1250
     if request.method == 'POST':
         form = WaitlistForm(request.POST or None)
         if form.is_valid():
