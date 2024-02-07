@@ -16928,7 +16928,7 @@ Common: Spacing Gutters
 
 .purple-text{
   color: #9C28B1 !important;
-  text-shadow: 0 0 60px #f5eaf7, 0 0 70px #e0bce7, 0 0 80px #e0bce7, 0 0 90px #e0bce7, 0 0 100px #f5eaf7 !important;
+  text-shadow: 0 0 60px #f5eaf7 !important;
 }
 
 @media (max-width: 364px) {
