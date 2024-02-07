@@ -7,14 +7,17 @@ from django.http import JsonResponse
 
 def index(request):
     email_submitted = WaitlistEmail.objects.all().count() + 1250
-    if request.method == 'POST':
+    if request.method == 'POST' and request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest':
         form = WaitlistForm(request.POST or None)
         if form.is_valid():
             form.save()
-            messages.success(request,"You've been added to the waitlist")
-            return redirect('core:success')
+            return JsonResponse({'success': True, 'message': f"nothing"})
+        else:
+            errors = form.errors.as_json()
+            return JsonResponse({'success': False, 'errors': errors})
     else:
         form = WaitlistForm()
+        
 
     context = {'form': form, "emails":email_submitted}
     return render(request,"index.html", context)

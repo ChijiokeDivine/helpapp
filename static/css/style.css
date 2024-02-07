@@ -17082,4 +17082,13 @@ Common: Spacing Gutters
 
 .just-text{
   font-family: "Poppins", sans-serif;
+  font-size: 12px !important;
 }
+
+.nice-text-4{
+  font-family: "Poppins", sans-serif;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #dc3545 !important;
+}
+
