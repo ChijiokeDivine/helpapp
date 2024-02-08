@@ -34,13 +34,13 @@ def index(request):
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
           <tbody>
             <tr>
-              <td valign="top" align="center" style="font-family:Google Sans,Roboto,Helvetica,Arial sans-serif;font-size:36px;font-weight:500;line-height:44px;color:#202124;padding:40px 40px 0px 40px;letter-spacing:-0.31px; border-radius: 5px;">
-              <img src="https://helpappafrica.com/static/images/help-img-345-werier34r3-32-removebg-preview.png"/>
+              <td valign="top" align="center" style="font-family:Google Sans,Roboto,Helvetica,Arial sans-serif;font-size:36px;font-weight:500;line-height:44px;color:#202124;padding:40px 40px 0px 40px;letter-spacing:-0.31px">
+              <img src="https://helpappafrica.com/static/images/help-img-345-werier34r3-32.jpg" style="border-radius: 15px;" height="200"/>
                 </td>
             </tr>
             
             <tr>
-              <td valign="top" align="center" style="font-family:Google Sans,Roboto,Helvetica,Arial sans-serif;font-size:36px;font-weight:500;line-height:44px;color:#202124;padding:40px 40px 0px 40px;letter-spacing:-0.31px">
+              <td valign="top" align="center" style="font-family:Google Sans,Roboto,Helvetica,Arial sans-serif;font-size:36px;font-weight:500;height:44px;color:#202124;padding:40px 40px 0px 40px;letter-spacing:-0.31px">
               
                 You're on the <span class="il">waitlist</span>!</td>
             </tr>
@@ -57,15 +57,15 @@ def index(request):
             
             <tr>
               <td valign="top" align="left" style="font-family:Roboto,Helvetica,Arial sans-serif;font-size:14px;line-height:24px;color:#414347;padding:20px 40px 20px 40px">
-                Want to partner with us? Contact <span class="il">waiting</span>, us at <a href="tel:+16142161159" style="color: #9c28b1; text-decoration: none; font-weight: 600;">+1 (614) 216-1159</a> <span style="font-weight: 600;">Or</span> <a href="mailto:helpteam@helpaappafrica.com" style="color: #9c28b1;  text-decoration: none; font-weight: 600;">HelpTeam@helpaappafrica.com</a> </td>
+                Want to partner with us? Contact <span class="il">waiting</span>, us at <a href="tel:+16142161159" style="color: #9c28b1; text-decoration: none; font-weight: 600;">+1 (614) 216-1159</a>  <span style="font-weight: 600;">Or</span>  <a href="mailto:helpteam@helpaappafrica.com" style="color: #9c28b1;  text-decoration: none; font-weight: 600;">HelpTeam@helpaappafrica.com</a> </td>
             </tr>
             
-            <tr>
-              <td valign="top" align="center" style="font-family:Google Sans,Roboto,Helvetica,Arial sans-serif;font-size:36px;font-weight:500;line-height:44px;color:#202124;padding:40px 40px 0px 40px;letter-spacing:-0.31px">
-              <img src="https://helpappafrica.com/static/images/help-img-345-werier34r3-32.jpg"/>
+            
+             <tr>
+              <td valign="top" align="center" style="font-family:Google Sans,Roboto,Helvetica,Arial sans-serif;font-size:36px;font-weight:500;line-height:44px;color:#202124;padding:40px 40px 0px 40px;letter-spacing:-0.31px; border-radius: 5px;">
+              <img src="https://helpappafrica.com/static/images/help-img-345-werier34r3-32-removebg-preview.png" height="200"/>
                 </td>
             </tr>
-            
             <tr>
               <td valign="top" align="left" style="font-family:Roboto,Helvetica,Arial sans-serif;font-size:14px;line-height:24px;color:#414347;padding:20px 20px 0px 40px">
                 Thanks for registering!</td>
