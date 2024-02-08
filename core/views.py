@@ -63,7 +63,7 @@ def index(request):
             
              <tr>
               <td valign="top" align="center" style="font-family:Google Sans,Roboto,Helvetica,Arial sans-serif;font-size:36px;font-weight:500;line-height:44px;color:#202124;padding:40px 40px 0px 40px;letter-spacing:-0.31px; border-radius: 5px;">
-              <img src="https://helpappafrica.com/static/images/help-img-345-werier34r3-32-removebg-preview.png" height="200"/>
+              <img src="https://helpappafrica.com/static/images/help-img-345-werier34r3-32-removebg-preview.png" height="100"/>
                 </td>
             </tr>
             <tr>
