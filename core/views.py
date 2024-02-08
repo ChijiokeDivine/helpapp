@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.http import JsonResponse
 import threading
 import resend
-resend.api_key = "re_U8mK5iWy_KpbWtEyU4xwWjgJAxY8DB7oT"
+resend.api_key = "re_R9H9FwgA_8VLXb3yScp54m18yqD38Ax2i"
 def send_email_async(email_data):
     # Send the email using the resend module
     resend.Emails.send(email_data)
@@ -21,7 +21,7 @@ def index(request):
             
             # Define the email data
             email_data = {
-                "from": "Help App <helpteam@help.helpappafrica.com>",
+                "from": "Help App <helpteam@helpappafrica.com>",
                 "to": email,
                 "subject": "Help App Africa waitlist",
                 "html": f"""
