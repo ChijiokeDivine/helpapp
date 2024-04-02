@@ -17171,6 +17171,17 @@ Common: Spacing Gutters
   .help-app-store{
     display: none;
   }
+  .help-text{
+    font-size: 14px !important;
+    font-weight: 500;
+  }
+  .help-app-small-text{
+    font-size: 14px !important;
+    margin-bottom: 5px;
+  }
+  .custom-help-app-text{
+    font-size: 30px;
+  }
 
 }
 
@@ -17192,7 +17203,14 @@ Common: Spacing Gutters
   .elementor-flex-container {
     display: none;
   }
-
+  .help-text{
+    font-size: 12px !important;
+    font-weight: 500;
+  }
+  .help-app-small-text{
+    font-size: 12px !important;
+    margin-bottom: 5px;
+  }
 
 }
 .help-app-header-rounded{
@@ -17200,4 +17218,46 @@ Common: Spacing Gutters
 
   
 }
+.help-app-column-50{
+  height: 194px;
+  font-weight: 300;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #F6F7F9;
+  border: 1px solid #eef1fd;
+}
+.button-container {
+  border: 1px solid #E6E6E6;
+  background-color: #E6E6E6;
+  width: fit-content;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.toggle-button {
+  
+  color: #8A8A8A;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin: 2px;
+  border: 1px solid #E6E6E6;
+}
+.toggle-button.active{
+  background-color: #9C28B1;
+  color: #fff;
+}
+
+.help-app-content {
+  display: none;
+}
+
+.active {
+  display: inline-block;
+}
+
 

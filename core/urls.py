@@ -6,8 +6,8 @@ from django.urls import path
 app_name = 'core'
 
 urlpatterns = [
-    path('', index, name="index"),
-    path('waitlist/', waitlist, name='waitlist'),
+    path('help/secret-url/', index, name="index"),
+    path('', waitlist, name='waitlist'),
     path('success/', success, name='success'),
 
 ]

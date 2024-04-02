@@ -128,3 +128,6 @@ hiddenElemen.forEach((el) => observ.observe(el));
 
 const hiddenEleme = document.querySelectorAll("[goRight]");
 hiddenEleme.forEach((el) => obser.observe(el));
+
+
+
