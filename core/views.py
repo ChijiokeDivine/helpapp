@@ -10,8 +10,12 @@ def send_email_async(email_data):
     # Send the email using the resend module
     resend.Emails.send(email_data)
 
-
 def index(request):
+    return render(request, "index.html")
+
+
+
+def waitlist(request):
     email_submitted = WaitlistEmail.objects.all().count() + 1250
     if request.method == 'POST' and request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest':
         form = WaitlistForm(request.POST or None)
@@ -103,7 +107,7 @@ def index(request):
         form = WaitlistForm()
 
     context = {'form': form, "emails":email_submitted}
-    return render(request,"index.html", context)
+    return render(request,"waitlist.html", context)
 
 
 def success(request):

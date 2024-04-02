@@ -49,7 +49,7 @@ $('#waitlistForm').on('submit', function(e) {
 
   $.ajax({
       type: 'POST',
-      url: '',  // Update with your login view URL
+      url: '/waitlist/',  
       data: $(this).serialize(),
       success: function(response) {
           if (response.success) {

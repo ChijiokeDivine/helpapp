@@ -17148,3 +17148,56 @@ Common: Spacing Gutters
     }
     
 }
+
+@media (min-width: 768px) {
+  .header-help-app-text{
+    font-size: 13px !important;
+    padding: 15px 11px;
+  }
+  .help-app-img{
+    width: 15px;
+    height: 15px;
+  }
+  .help-app-app{
+    width: 165.93px;
+    height: 48px;
+    margin-bottom: 60px;
+    
+  }
+  .elementor-flex-container {
+    display: flex;
+    justify-content: center; /* Align items horizontally */
+  }
+  .help-app-store{
+    display: none;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .header-help-app-text{
+    font-size: 10px !important;
+    padding: 4px 2px;
+    
+  }
+  .help-app-img{
+    width: 12px;
+    height: 12px;
+  }
+  .help-app-app{
+    width: 166.15px;
+    height: 48px;
+    margin-bottom: 10px;
+  }
+  .elementor-flex-container {
+    display: none;
+  }
+
+
+}
+.help-app-header-rounded{
+  background-color: #E0BCE7;
+
+  
+}
+
