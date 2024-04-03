@@ -17244,7 +17244,6 @@ Common: Spacing Gutters
   border-radius: 5px;
   cursor: pointer;
   font-size: 12px;
-  margin: 2px;
   border: 1px solid #E6E6E6;
 }
 .toggle-button.active{

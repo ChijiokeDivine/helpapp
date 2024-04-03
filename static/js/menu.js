@@ -38,17 +38,8 @@ function toggleMenu() {
   menuOverlay.classList.add("transition");
 }
 
-menuTrigger?.addEventListener("click", () => {
-  toggleMenu();
-})
 
-closeMenu?.addEventListener("click", () => {
-  toggleMenu();
-})
 
-menuOverlay.addEventListener("click", () => {
-  toggleMenu();
-})
 
 window.addEventListener("resize", function () {
   if (menu.classList.contains("transition")) {

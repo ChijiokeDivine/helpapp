@@ -49,7 +49,7 @@ $('#waitlistForm').on('submit', function(e) {
 
   $.ajax({
       type: 'POST',
-      url: '/waitlist/',  
+      url: '',  
       data: $(this).serialize(),
       success: function(response) {
           if (response.success) {
@@ -82,7 +82,6 @@ $('#waitlistForm').on('submit', function(e) {
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-      console.log(entry)
       if (entry.isIntersecting){
           entry.target.classList.add('visible-link');
       }
@@ -93,7 +92,6 @@ const observer = new IntersectionObserver((entries) => {
 });
 const observerer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-      console.log(entry)
       if (entry.isIntersecting){
           entry.target.classList.add('visible-link');
       }
@@ -102,7 +100,6 @@ const observerer = new IntersectionObserver((entries) => {
 });
 const observ = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-      console.log(entry)
       if (entry.isIntersecting){
           entry.target.classList.add('visible-link');
       }
@@ -111,7 +108,7 @@ const observ = new IntersectionObserver((entries) => {
 });
 const obser = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-      console.log(entry)
+
       if (entry.isIntersecting){
           entry.target.classList.add('visible-link');
       }

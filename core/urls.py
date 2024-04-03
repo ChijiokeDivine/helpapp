@@ -1,4 +1,4 @@
-from .views import index, success, waitlist
+from .views import index, success, waitlist, contact, about
 from django.urls import path
 
 
@@ -9,5 +9,7 @@ urlpatterns = [
     path('help/secret-url/', index, name="index"),
     path('', waitlist, name='waitlist'),
     path('success/', success, name='success'),
+    path('contact/', contact, name='contact'),
+    path('about/', about, name='about'),
 
 ]
