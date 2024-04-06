@@ -17182,7 +17182,9 @@ Common: Spacing Gutters
   .custom-help-app-text{
     font-size: 30px;
   }
-
+  .help-smaller-text{
+    font-size: 15px !important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -17210,6 +17212,9 @@ Common: Spacing Gutters
   .help-app-small-text{
     font-size: 12px !important;
     margin-bottom: 5px;
+  }
+  .help-smaller-text{
+    font-size: 12px !important;
   }
 
 }
@@ -17259,4 +17264,62 @@ Common: Spacing Gutters
   display: inline-block;
 }
 
+
+.form {
+  background-color: #fff;
+  display: block;
+  padding: 1rem;
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: left;
+  color: #000;
+  margin-bottom: 40px;
+ 
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.input-container input, .form button {
+  outline: none;
+  border: 1px solid #e5e7eb;
+  margin: 8px 0;
+}
+
+.input-container input {
+  background-color: #fff;
+  padding: 1rem;
+  padding-right: 3rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+
+
+.submit {
+  display: block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: #9C28B1 !important;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 5px !important;
+  text-transform: uppercase;
+}
 
