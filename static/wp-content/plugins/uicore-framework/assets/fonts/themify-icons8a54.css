@@ -910,23 +910,10 @@
 .ti-brush-alt:before {
     content: '\e727';
 }
-.ti-youtube:before {
-    content: '\e728';
-}
-.ti-vimeo:before {
-    content: '\e729';
-}
-.ti-twitter:before {
-    content: '\e72a';
-}
+
+
 .ti-time:before {
     content: '\e72b';
-}
-.ti-tumblr:before {
-    content: '\e72c';
-}
-.ti-skype:before {
-    content: '\e72d';
 }
 .ti-share:before {
     content: '\e72e';
@@ -937,21 +924,15 @@
 .ti-rocket:before {
     content: '\e730';
 }
-.ti-pinterest:before {
-    content: '\e731';
-}
+
 .ti-new-window:before {
     content: '\e732';
 }
-.ti-microsoft:before {
-    content: '\e733';
-}
+
 .ti-list-ol:before {
     content: '\e734';
 }
-.ti-linkedin:before {
-    content: '\e735';
-}
+
 .ti-layout-sidebar-2:before {
     content: '\e736';
 }
@@ -973,66 +954,20 @@
 .ti-layout-column2-alt:before {
     content: '\e73c';
 }
-.ti-instagram:before {
-    content: '\e73d';
-}
-.ti-google:before {
-    content: '\e73e';
-}
-.ti-github:before {
-    content: '\e73f';
-}
-.ti-flickr:before {
-    content: '\e740';
-}
-.ti-facebook:before {
-    content: '\e741';
-}
-.ti-dropbox:before {
-    content: '\e742';
-}
-.ti-dribbble:before {
-    content: '\e743';
-}
-.ti-apple:before {
-    content: '\e744';
-}
-.ti-android:before {
-    content: '\e745';
-}
+
+
 .ti-save:before {
     content: '\e746';
 }
 .ti-save-alt:before {
     content: '\e747';
 }
-.ti-yahoo:before {
-    content: '\e748';
-}
-.ti-wordpress:before {
-    content: '\e749';
-}
-.ti-vimeo-alt:before {
-    content: '\e74a';
-}
-.ti-twitter-alt:before {
-    content: '\e74b';
-}
+
 .ti-tumblr-alt:before {
     content: '\e74c';
 }
-.ti-trello:before {
-    content: '\e74d';
-}
-.ti-stack-overflow:before {
-    content: '\e74e';
-}
-.ti-soundcloud:before {
-    content: '\e74f';
-}
-.ti-sharethis:before {
-    content: '\e750';
-}
+
+
 .ti-sharethis-alt:before {
     content: '\e751';
 }
@@ -1042,24 +977,8 @@
 .ti-pinterest-alt:before {
     content: '\e753';
 }
-.ti-microsoft-alt:before {
-    content: '\e754';
-}
-.ti-linux:before {
-    content: '\e755';
-}
-.ti-jsfiddle:before {
-    content: '\e756';
-}
-.ti-joomla:before {
-    content: '\e757';
-}
-.ti-html5:before {
-    content: '\e758';
-}
-.ti-flickr-alt:before {
-    content: '\e759';
-}
+
+
 .ti-email:before {
     content: '\e75a';
 }

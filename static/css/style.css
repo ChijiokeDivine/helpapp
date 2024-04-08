@@ -17191,6 +17191,9 @@ Common: Spacing Gutters
   .small-text-egruhgj{
     font-size: 15px;
   }
+  .custom-help-img{
+    height: 70px !important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -17229,10 +17232,13 @@ Common: Spacing Gutters
     font-size: 14px !important;
   }
   .disp-flex{
-    display: grid;
+    display: flex;
   }
   .small-text-egruhgj{
     font-size: 12px;
+  }
+  .custom-help-img{
+    height: 50px !important;
   }
 
 }
