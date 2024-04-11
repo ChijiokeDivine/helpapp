@@ -188,13 +188,13 @@
                                     <div class="elementor-container elementor-column-gap-default">
                                         <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-5d70c9c"
                                             data-id="5d70c9c" data-element_type="column"  style="text-align: left;">
-                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-widget-wrap elementor-element-populated"  style="justify-content: unset;">
                                                 <div class="elementor-element elementor-element-befd03b elementor-widget elementor-widget-image"
                                                     data-id="befd03b" data-element_type="widget"
                                                     data-widget_type="image.default">
-                                                    <div class="elementor-widget-container">
-                                                        <img loading="lazy" width="324" height="96"
-                                                            src="{% static 'images/help-logo-removebg-preview.webp' %}"
+                                                    <div class="elementor-widget-container" style="text-align: left; margin-bottom: 30px;">
+                                                        <img loading="lazy" width="324" height="150"
+                                                            src="{% static 'images/help-white-removebg-preview.png' %}"
                                                             class="attachment-full size-full wp-image-188" alt
                                                          />
                                                     </div>
@@ -202,8 +202,19 @@
                                                 <div class="elementor-element elementor-element-744b302 elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget-mobile__width-initial elementor-widget elementor-widget-text-editor"
                                                     data-id="744b302" data-element_type="widget"
                                                     data-widget_type="text-editor.default">
-                                                    <div class="elementor-widget-container"  style="text-align: left;">
+                                                    <div class="elementor-widget-container"  style="text-align: left; margin-bottom: 30px;">
                                                         <p style="color: #fff ;">Bringing the services closer!!!</p>
+                                                    </div>
+                                                </div>
+                                                <div class="elementor-element elementor-element-befd03b elementor-widget elementor-widget-image"
+                                                    data-id="befd03b" data-element_type="widget"
+                                                    data-widget_type="image.default">
+                                                    <div class="elementor-widget-container" style="text-align: left;">
+                                                       
+                                                         <a href="" target="_blank"><img src="{% static "images/facebook.png" %}" style="width: 40px; margin-right: 18px;"/></a>
+														<a href="" target="_blank"><img src="{% static "images/linkedin.png" %}" style="width: 40px; margin-right: 18px;"/></a>
+							
+														<a href="" target="_blank"><img src="{% static "images/whatsapp.png" %}" style="width: 40px;"/></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -214,9 +225,10 @@
                                                 <div class="elementor-element elementor-element-dd6b826 elementor-widget elementor-widget-heading"
                                                     data-id="dd6b826" data-element_type="widget"
                                                     data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default"  style="text-align: left;">
-                                                            Quick Links</h2>
+                                                    <div class="elementor-widget-container" style="text-align: left; ">
+                                                        <h2 class="elementor-heading-title elementor-size-default"  style="text-align: left; padding: 0px; margin: 0px;">
+                                                            Quick Links </h2>
+                                                            <span style="background: #fff; width: 150px; height: 1px; padding: 0px; margin: 0px;"></span>
                                                     </div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-e9e8119 elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
@@ -225,24 +237,29 @@
                                                     <div class="elementor-widget-container">
                                                         <ul class="elementor-icon-list-items"  style="text-align: left;">
                                                             <li class="elementor-icon-list-item" >
-                                                                <a href="#">
+                                                                <a href="#"  style="justify-content: unset;  padding-bottom: 12px;">
                                                                     <span class="elementor-icon-list-text">FAQs</span>
                                                                 </a>
                                                             </li>
                                                             <li class="elementor-icon-list-item">
-                                                                <a href="#">
+                                                                <a href="#"  style="justify-content: unset;  padding-bottom: 12px;">
                                                                     <span
                                                                         class="elementor-icon-list-text">Go to Playstore</span>
                                                                 </a>
                                                             </li>
                                                             <li class="elementor-icon-list-item">
-                                                                <a href="#">
+                                                                <a href="#"  style="justify-content: unset;  padding-bottom: 12px;">
                                                                     <span class="elementor-icon-list-text">Go to Appstore</span>
                                                                 </a>
                                                             </li>
                                                             <li class="elementor-icon-list-item">
-                                                                <a href="#">
+                                                                <a href="{% url "core:contact" %}"  style="justify-content: unset;  padding-bottom: 12px;">
                                                                     <span class="elementor-icon-list-text">Contact Support</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="elementor-icon-list-item">
+                                                                <a href="{% url "core:team" %}"  style="justify-content: unset;  padding-bottom: 12px;">
+                                                                    <span class="elementor-icon-list-text">Meet the team</span>
                                                                 </a>
                                                             </li>
                                                         </ul>
@@ -258,42 +275,63 @@
                                                 <div class="elementor-element elementor-element-05a7c4a elementor-widget elementor-widget-heading"
                                                     data-id="05a7c4a" data-element_type="widget"
                                                     data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default"  style="text-align: left;">
+                                                    <div class="elementor-widget-container" style="text-align: left;">
+                                                        <h2 class="elementor-heading-title elementor-size-default"  style="text-align: left; padding: 0px; margin: 0px;">
                                                             Contact</h2>
+                                                            <span style="background: #fff; width: 150px; height: 1px; padding: 0px; margin: 0px;"></span>
                                                     </div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-794d12a elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                                     data-id="794d12a" data-element_type="widget"
                                                     data-widget_type="icon-list.default">
                                                     <div class="elementor-widget-container">
-                                                        <ul class="elementor-icon-list-items"  style="text-align: left;">
-                                                            <li class="elementor-icon-list-item">
-                                                                <a href="#">
+                                                        <ul class="elementor-icon-list-items" style="margin-bottom: 60px;">
+                                                            <li class="elementor-icon-list-item "  >
+                                                                <a  style="justify-content: unset; padding-bottom: 12px;">
                                                                     <span
                                                                         class="elementor-icon-list-text">Lagos state, Nigeria</span>
                                                                 </a>
                                                             </li>
                                                             <li class="elementor-icon-list-item">
-                                                                <a href="#">
+                                                                <a href="#"  style="justify-content: unset; padding-bottom: 12px;">
                                                                     <span
                                                                         class="elementor-icon-list-text">+234878393888</span>
                                                                 </a>
                                                             </li>
                                                             <li class="elementor-icon-list-item">
-                                                                <a href="#">
+                                                                <a href="#"  style="justify-content: unset; padding-bottom: 12px;">
                                                                     <span
                                                                         class="elementor-icon-list-text">Support@Helpappafrica.com</span>
                                                                 </a>
                                                             </li>
+
+                                                        
                                                             
                                                         </ul>
+                                                        <div class="elementor-element elementor-element-05a7c4a elementor-widget elementor-widget-heading"
+                                                            data-id="05a7c4a" data-element_type="widget"
+                                                            data-widget_type="heading.default">
+                                                            <div class="elementor-widget-container" style="text-align: left;">
+                                                                <h2 class="elementor-heading-title elementor-size-default"  style="text-align: left;padding: 0px; margin: 0px;">
+                                                                    Join our newsletter</h2>
+                                                                    <span style="background: #fff; width: 150px; height: 1px; padding: 0px; margin: 0px;"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-element elementor-element-794d12a elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                                data-id="794d12a" data-element_type="widget"
+                                                                data-widget_type="icon-list.default">
+                                                            <div class="elementor-widget-container">
+                                                                <p style="color: #fff; font-weight: 300; font-size: 13px;">Sign up to receive or weekly newsletter about new and trending discount offers</p>
+                                                            </div>
+                                                        </div>
                                                         <div class="input-group disp-flex">
-                                                            <input type="email" class="input-hsdvdeh input--submit" id="Email" name="Email" placeholder="uiverse@verse.io" autocomplete="off">
-                                                            <input class="button--submit" value="Subscribe" type="submit">
+                                                            <input type="email" class="input-hsdvdeh input--submit" id="Email" name="Email" placeholder="Email Address" autocomplete="off">
+                                                            <input class="button--submit" value="Submit" type="submit" >
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                
                                             </div>
                                         </div>
                                     </div>

@@ -15081,10 +15081,8 @@ div#loading img {
   max-width: 350px;
 }
 
-/* ========== Blog Main Style ============= */
-.sidebar {
-  /*~ ******Sidebar Blog Card *********** ~*/
-}
+
+
 .sidebar-wrapper {
   display: flex;
   flex-direction: column;
@@ -17470,25 +17468,28 @@ Common: Spacing Gutters
   color: #fff;
   font-size: 15px;
   border: 1px solid #5e4dcd;
-  border-radius: 6px 0 0 6px;
-  background-color: transparent;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #EAEBEE;
 }
 
 .button--submit {
   min-height: 50px;
   padding: .5em 1em;
   border: none;
-  border-radius: 0 6px 6px 0;
+  border-radius:  5px !important;
   background-color: #5e4dcd;
   color: #fff;
   font-size: 15px;
   cursor: pointer;
-  transition: background-color .3s ease-in-out;
+  margin-left: 4px !important;
+  background-color: #9c28b1 !important;
+}
+.input-hsdvdeh::placeholder{
+  font-size: 14px;
+  color: #202030;
 }
 
-.button--submit:hover {
-  background-color: #5e5dcd;
-}
 
 .input:focus, .input:focus-visible {
   border-color: #3898EC;
