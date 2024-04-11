@@ -110,17 +110,17 @@
 					<nav class="uicore elementor-container">
 						<div class="uicore-branding" data-uils="header-branding" data-uils-title="Site Logo">
 							<a href="/" rel="home">
-								<img class="uicore uicore-logo uicore-main"
-									src="{% static 'img/help.webp' %}"
+								<img class="uicore uicore-logo uicore-main"  style="height: 30px;"
+									src="{% static 'images/help-logo-removebg-preview.webp' %}"
 									alt="Help Logo" />
-								<img class="uicore uicore-logo uicore-second"
-									src="{% static 'img/help.webp' %}"
+								<img class="uicore uicore-logo uicore-second"  style="height: 30px;"
+									src="{% static 'images/help-logo-removebg-preview.webp' %}"
 									alt="Help Logo" />
-								<img class="uicore uicore-logo uicore-mobile-main"
-									src="{% static 'img/help.webp' %}"
+								<img class="uicore uicore-logo uicore-mobile-main" style="height: 30px;"
+									src="{% static 'images/help-logo-removebg-preview.webp' %}"
 									alt="Help Logo" />
-								<img class="uicore uicore-logo uicore-mobile-second"
-									src="{% static 'img/help.webp' %}"
+								<img class="uicore uicore-logo uicore-mobile-second" style="height: 30px;"
+									src="{% static 'images/help-logo-removebg-preview.webp' %}"
 									alt="Help Logo" />
 							</a>
 						</div>
@@ -130,7 +130,7 @@
 									
 									
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a
-											href="#"><span class="ui-menu-item-wrapper">Meet the Team</span></a></li>
+											href="{% url "core:team" %}"><span class="ui-menu-item-wrapper">Meet the Team</span></a></li>
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a
 											href="{% url "core:about" %}"><span class="ui-menu-item-wrapper">About Us</span></a></li>
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a
@@ -156,9 +156,7 @@
 						<div class="uicore-mobile-head-right"> <button type="button" class="uicore-toggle uicore-ham"
 								aria-label="mobile-menu">
 								<span class="bars">
-									<span class="bar"></span>
-									<span class="bar"></span>
-									<span class="bar"></span>
+									<p class="help-menu-bar">Menu</p>
 								</span>
 							</button>
 						</div>
@@ -173,13 +171,14 @@
             
             
             {% endblock content %}
+            
             <footer id="uicore-tb-footer" itemscope="itemscope" itemtype="https://schema.org/WPFooter"
             style="position:sticky;bottom:0;z-index:-2;max-height: 100vh; ">
             <div data-elementor-type="uicore-tb" data-elementor-id="53" class="elementor elementor-53" >
                 <div class="elementor-section elementor-top-section elementor-element elementor-element-f527102 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                     data-id="f527102" data-element_type="section"
                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" style="background-color: #561661 !important;">
-                    <div class="elementor-container elementor-column-gap-no" >
+                    <div class="elementor-container elementor-column-gap-default" >
                         <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2fac2d4" 
                             data-id="2fac2d4" data-element_type="column" >
                             <div class="elementor-widget-wrap elementor-element-populated">
@@ -187,15 +186,15 @@
                                     class="elementor-section elementor-inner-section elementor-element elementor-element-61cf2dc elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                     data-id="61cf2dc" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-default">
-                                        <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-5d70c9c"
-                                            data-id="5d70c9c" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-5d70c9c"
+                                            data-id="5d70c9c" data-element_type="column"  style="text-align: left;">
                                             <div class="elementor-widget-wrap elementor-element-populated">
                                                 <div class="elementor-element elementor-element-befd03b elementor-widget elementor-widget-image"
                                                     data-id="befd03b" data-element_type="widget"
                                                     data-widget_type="image.default">
                                                     <div class="elementor-widget-container">
                                                         <img loading="lazy" width="324" height="96"
-                                                            src="{% static 'img/help.webp' %}"
+                                                            src="{% static 'images/help-logo-removebg-preview.webp' %}"
                                                             class="attachment-full size-full wp-image-188" alt
                                                          />
                                                     </div>
@@ -203,20 +202,20 @@
                                                 <div class="elementor-element elementor-element-744b302 elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget-mobile__width-initial elementor-widget elementor-widget-text-editor"
                                                     data-id="744b302" data-element_type="widget"
                                                     data-widget_type="text-editor.default">
-                                                    <div class="elementor-widget-container" >
+                                                    <div class="elementor-widget-container"  style="text-align: left;">
                                                         <p style="color: #fff ;">Bringing the services closer!!!</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-8e12a60"
-                                            data-id="8e12a60" data-element_type="column">
+                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-5d70c9c"
+                                            data-id="8e12a60" data-element_type="column" >
                                             <div class="elementor-widget-wrap elementor-element-populated">
                                                 <div class="elementor-element elementor-element-dd6b826 elementor-widget elementor-widget-heading"
                                                     data-id="dd6b826" data-element_type="widget"
                                                     data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default">
+                                                        <h2 class="elementor-heading-title elementor-size-default"  style="text-align: left;">
                                                             Quick Links</h2>
                                                     </div>
                                                 </div>
@@ -224,8 +223,8 @@
                                                     data-id="e9e8119" data-element_type="widget"
                                                     data-widget_type="icon-list.default">
                                                     <div class="elementor-widget-container">
-                                                        <ul class="elementor-icon-list-items">
-                                                            <li class="elementor-icon-list-item">
+                                                        <ul class="elementor-icon-list-items"  style="text-align: left;">
+                                                            <li class="elementor-icon-list-item" >
                                                                 <a href="#">
                                                                     <span class="elementor-icon-list-text">FAQs</span>
                                                                 </a>
@@ -253,14 +252,14 @@
                                         </div>
                                     
                                         
-                                        <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-284ab07"
+                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-5d70c9c"
                                             data-id="284ab07" data-element_type="column">
                                             <div class="elementor-widget-wrap elementor-element-populated">
                                                 <div class="elementor-element elementor-element-05a7c4a elementor-widget elementor-widget-heading"
                                                     data-id="05a7c4a" data-element_type="widget"
                                                     data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default">
+                                                        <h2 class="elementor-heading-title elementor-size-default"  style="text-align: left;">
                                                             Contact</h2>
                                                     </div>
                                                 </div>
@@ -268,21 +267,31 @@
                                                     data-id="794d12a" data-element_type="widget"
                                                     data-widget_type="icon-list.default">
                                                     <div class="elementor-widget-container">
-                                                        <ul class="elementor-icon-list-items">
+                                                        <ul class="elementor-icon-list-items"  style="text-align: left;">
                                                             <li class="elementor-icon-list-item">
                                                                 <a href="#">
                                                                     <span
-                                                                        class="elementor-icon-list-text">hello@outgrid.com</span>
+                                                                        class="elementor-icon-list-text">Lagos state, Nigeria</span>
                                                                 </a>
                                                             </li>
                                                             <li class="elementor-icon-list-item">
                                                                 <a href="#">
-                                                                    <span class="elementor-icon-list-text">2020
-                                                                        Massachusetts Ave NW, Washington, DC
-                                                                        20036</span>
+                                                                    <span
+                                                                        class="elementor-icon-list-text">+234878393888</span>
                                                                 </a>
                                                             </li>
+                                                            <li class="elementor-icon-list-item">
+                                                                <a href="#">
+                                                                    <span
+                                                                        class="elementor-icon-list-text">Support@Helpappafrica.com</span>
+                                                                </a>
+                                                            </li>
+                                                            
                                                         </ul>
+                                                        <div class="input-group disp-flex">
+                                                            <input type="email" class="input-hsdvdeh input--submit" id="Email" name="Email" placeholder="uiverse@verse.io" autocomplete="off">
+                                                            <input class="button--submit" value="Subscribe" type="submit">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -290,7 +299,7 @@
                                     </div>
                                 </section>
                                 <div class="elementor-section elementor-inner-section elementor-element elementor-element-1047007 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default "
-                                    data-id="1047007" data-element_type="section" style="text-align: center;">
+                                    data-id="1047007" data-element_type="section" style="text-align: center;  bottom: 0; left: 0; position: static;">
                                     <div class="elementor-widget-container ">
                                 
                                         <p style="color: #fff;">Help App Africa, all rights reserved</p>
@@ -314,7 +323,7 @@
         <nav class="uicore elementor-container">
             <div class="uicore-branding uicore-mobile">
                 <a href="/" rel="home">
-                    <img class="uicore uicore-logo" src="{% static 'img/help.webp' %}"
+                    <img class="uicore uicore-logo" src="{% static 'images/help-logo-removebg-preview.webp' %}"
                         alt="Help App Logo" />
                 </a>
             </div>
@@ -323,9 +332,7 @@
             <div class="uicore-mobile-head-right">
                 <button type="button" class="uicore-toggle uicore-ham" aria-label="mobile-menu">
                     <span class="bars">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
+                        <p class="help-menu-bar">Close</p>
                     </span>
                 </button>
             </div>
@@ -336,7 +343,7 @@
                     
                     
                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6" style="padding-top: 13px; padding-bottom: 13px; border: 1px solid #F5EAF7; margin-top: 10px;"><a
-                        href="#"><span class="ui-menu-item-wrapper">Meet the Team</span></a></li>
+                        href="{% url "core:team" %}"><span class="ui-menu-item-wrapper">Meet the Team</span></a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7" style="padding-top: 13px; padding-bottom: 13px; border: 1px solid #F5EAF7;"><a
                         href="{% url "core:about" %}"><span class="ui-menu-item-wrapper">About Us</span></a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8" style="padding-top: 13px; padding-bottom: 13px; border: 1px solid #F5EAF7;"><a

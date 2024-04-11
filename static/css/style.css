@@ -17180,7 +17180,7 @@ Common: Spacing Gutters
     margin-bottom: 5px;
   }
   .custom-help-app-text{
-    font-size: 30px;
+    font-size: 30px !important;
   }
   .help-smaller-text{
     font-size: 15px !important;
@@ -17190,10 +17190,56 @@ Common: Spacing Gutters
   }
   .small-text-egruhgj{
     font-size: 15px;
+
   }
   .custom-help-img{
     height: 70px !important;
   }
+  .help-app-large-image-1{
+    margin-right: 10px;
+  }
+  .help-app-large-image-2{
+    margin-left: 10px;
+  }
+  .align-img-right{
+    margin-left: 250px !important;
+  }
+  .custom-left-margin{
+    margin-left: 50px;
+    
+  }
+  .help-app-btn{
+    width: 180px;
+  }
+  .share-img{
+    width: 30px !important; 
+    height: 30px !important;
+  }
+}
+@media (max-width: 359px) {
+  .align-img-right{
+    display: none;
+  }
+  .team-info-section{
+    max-width: 400px;
+    max-height: fit-content;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 924px) {
+  .align-img-right{
+    margin-left: 100px !important;
+  }
+}
+@media screen and (min-width: 925px) and (max-width: 990px) {
+  .align-img-right{
+    margin-left: 100px !important;
+  }
+}
+@media (max-width: 290px){
+  .align-img-right{
+    display: none;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -17227,6 +17273,7 @@ Common: Spacing Gutters
   }
   .small-text-egruh{
     font-size: 24px !important;
+
   }
   .elementor-widget-container{
     font-size: 14px !important;
@@ -17240,12 +17287,56 @@ Common: Spacing Gutters
   .custom-help-img{
     height: 50px !important;
   }
+  .black-left-padding{
+    font-size: 12px;
+  }
+  .align-img-right{
+    margin-left: 150px !important;
+  }
+  .custom-left-margin{
+    padding-left: 30px;
+    font-size: 10px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+  .custom-h1-text{
+    font-size: 20px !important;
+  }
+  .help-app-btn{
+    width: 100%;
+  }
+  .share-img{
+    width: 20px !important; 
+    height: 20px !important;
+  }
+  .input-hsdvdeh{
+    min-height: 30px;
+    max-width: 100px;
+  }
 
+}
+.share-img{
+  padding: 5px;
+}
+.help-app-btn{
+  padding: 10px;
+  background-color: #9C28B1;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #9C28B1;
+  font-size: 12px;
 }
 .help-app-header-rounded{
   background-color: #E0BCE7;
 
   
+}
+
+.black-left-padding{
+  color: #000; 
+  text-align: left;
+  padding-left: 3px;
 }
 .help-app-column-50{
   height: 194px;
@@ -17347,3 +17438,59 @@ Common: Spacing Gutters
   text-transform: uppercase;
 }
 
+.help-menu-bar{
+  margin-bottom: 0px; 
+  color: #000; 
+  border-radius: 20px; 
+  border: 1px solid #E6E6E6;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.team-info-section{
+  border-radius: 8px;
+  background: #fff;
+  transform: translateY(-100px);
+  padding: 10px;
+  width: fit-content;
+
+}
+
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-hsdvdeh {
+  min-height: 50px;
+  max-width: 150px;
+  padding: 0 1rem;
+  color: #fff;
+  font-size: 15px;
+  border: 1px solid #5e4dcd;
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+}
+
+.button--submit {
+  min-height: 50px;
+  padding: .5em 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #5e4dcd;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+.button--submit:hover {
+  background-color: #5e5dcd;
+}
+
+.input:focus, .input:focus-visible {
+  border-color: #3898EC;
+  outline: none;
+}
