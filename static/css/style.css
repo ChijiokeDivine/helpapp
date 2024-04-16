@@ -17073,6 +17073,28 @@ Common: Spacing Gutters
   z-index: -1;
   border-radius: 10px; /* Adjust border radius to match your content */
 }
+.help-img-info-text{
+  background-color: rgba(255, 255, 255, 0.4); 
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+
+}
+.bdt-image-mask {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  
+}
+
+.bdt-image-mask img {
+  transition: transform 0.3s ease; 
+}
+
+.bdt-image-mask:hover img {
+  transform: scale(1.1); 
+  border-radius: 8px;
+}
 @media (max-width: 578px) {
   .pink-shadow::before{
     top: -230px;
@@ -17152,6 +17174,16 @@ Common: Spacing Gutters
     font-size: 13px !important;
     padding: 15px 11px;
   }
+
+  .help-img-info-text{
+    font-size: 28px;
+  }
+  .help-custom-padding-nbgvjsneoh{
+    padding-top: 50px;
+  }
+  .jbxffddijviej{
+    margin-top: 40px;
+  }
   .help-app-img{
     width: 15px;
     height: 15px;
@@ -17213,6 +17245,46 @@ Common: Spacing Gutters
     width: 30px !important; 
     height: 30px !important;
   }
+  .elementor-12 .elementor-element.elementor-element-4937059{
+    padding: 0px 0px 0px 0px !important;
+  }
+}
+.help-app-blog-link{
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #efefef;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #9b29b2 !important;
+}
+.hover-on-image{
+  transition: box-shadow 0.5s ease;
+}
+
+.help-app-outline-side{
+  border-left: 1px solid #E6E6E6;
+  border-right: 1px solid #E6E6E6;
+  border-top:  1px solid #E6E6E6;
+  background-color: #F7F7F7;
+  cursor: pointer;
+}
+.help-app-outline-side-1{
+  border-left: 1px solid #E6E6E6;
+  border-right: 1px solid #E6E6E6;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.help-app-column-50:hover{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.hover-on-image:hover{
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 @media (max-width: 359px) {
   .align-img-right{
@@ -17239,12 +17311,76 @@ Common: Spacing Gutters
   }
 
 }
+.help-images-div-ghjksw{
+  padding-top: 110px !important;
+}
+.uicore .elementor-container{
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+.wp-image-19{
+  transform: translateX(75px);
+}
+.wp-image-20{
+  transform: translateY(-60px);
+}
+.wp-image-21{
+  transform: translateX(-75px); 
+}
+.elementor-12 .elementor-element.elementor-element-53978d5{
+  padding-top: 0px !important;
+}
+.elementor-12 .elementor-element.elementor-element-ed86b87{
+  text-align: center !important;
+}
+
 
 @media (max-width: 767px) {
+  .help-app-blog-link{
+    font-size: 13px;
+  }
+  .help-img-info-text{
+    font-size: 22px;
+  }
+  .elementor-12 .elementor-element.elementor-element-4937059{
+    padding: 48px 0px 0px 0px !important;
+  }
   .header-help-app-text{
     font-size: 10px !important;
     padding: 4px 2px;
     
+  }
+  .help-app-outline-side{
+    border-left: 0px solid #E6E6E6;
+    border-right: 0px solid #E6E6E6;
+    border-top:  0px solid #E6E6E6;
+    background-color: #F7F7F7;
+  }
+  .elementor-12 .elementor-element.elementor-element-4937059{
+    padding-bottom: 38px !important;
+  }
+  .wp-image-20{
+    transform: translateY(-20px);
+    
+  }
+  .wp-image-21{
+    transform: translateX(-30px); 
+  }
+  .wp-image-19{
+    transform: translateX(30px); 
+
+  }
+  .elementor-12 .elementor-element.elementor-element-4937059{
+    padding-top: 10px !important;
+  }
+  .help-images-div-ghjksw{
+    padding-top: 50px !important;
+  }
+  .help-custom-padding-nbgvjsneoh{
+    padding-top: 18px;
+  }
+  .ui-e-headline-text{
+    font-size: 30px;
   }
   .help-app-img{
     width: 12px;
@@ -17279,6 +17415,9 @@ Common: Spacing Gutters
   .disp-flex{
     display: flex;
   }
+  .help-app-nvnehoijgh{
+    margin-bottom: 8px !important;
+  }
   .small-text-egruhgj{
     font-size: 12px;
   }
@@ -17303,27 +17442,31 @@ Common: Spacing Gutters
   }
   .help-app-btn{
     width: 100%;
+    font-size: 13px !important;
+    padding: 18px;
   }
   .share-img{
-    width: 20px !important; 
-    height: 20px !important;
+    width: 35px !important; 
+    height: 35px !important;
   }
   .input-hsdvdeh{
     min-height: 30px;
     max-width: 100px;
   }
-
+  .help-app-nvneioj{
+    margin-bottom: 13px !important; 
+  }
 }
 .share-img{
   padding: 5px;
 }
 .help-app-btn{
-  padding: 10px;
+  padding: 15px;
   background-color: #9C28B1;
   color: #fff;
   border-radius: 5px;
   border: 1px solid #9C28B1;
-  font-size: 12px;
+  font-size: 15px;
 }
 .help-app-header-rounded{
   background-color: #E0BCE7;
@@ -17345,6 +17488,7 @@ Common: Spacing Gutters
   margin: 10px;
   background-color: #F6F7F9;
   border: 1px solid #eef1fd;
+  transition: box-shadow 0.5s ease;
 }
 .button-container {
   border: 1px solid #E6E6E6;
@@ -17494,4 +17638,20 @@ Common: Spacing Gutters
 .input:focus, .input:focus-visible {
   border-color: #3898EC;
   outline: none;
+}
+.help-app-nvneioj{
+  text-align: left;
+  margin-bottom: 30px; 
+  font-weight: 500;
+}
+.elementor-section .wp-image-19,
+.elementor-section .wp-image-21 {
+    transition: transform 0.5s ease; /* Add transition to both images */
+}
+.elementor-container:hover .wp-image-19 {
+  transform: translateX(-30px);
+}
+
+.elementor-container:hover .wp-image-21 {
+  transform: translateX(30px);
 }
