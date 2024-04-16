@@ -17336,6 +17336,10 @@ Common: Spacing Gutters
 
 
 @media (max-width: 767px) {
+  .help-share-text{
+    margin-bottom: 0px !important;
+    font-size: 20px !important;
+  }
   .help-app-blog-link{
     font-size: 13px;
   }
@@ -17431,7 +17435,7 @@ Common: Spacing Gutters
     margin-left: 150px !important;
   }
   .custom-left-margin{
-    padding-left: 30px;
+    padding-left: 18px;
     font-size: 10px;
     display: flex; 
     justify-content: center; 
@@ -17485,7 +17489,10 @@ Common: Spacing Gutters
   border-radius: 10px;
   font-size: 16px;
   padding: 10px;
-  margin: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   background-color: #F6F7F9;
   border: 1px solid #eef1fd;
   transition: box-shadow 0.5s ease;
@@ -17589,6 +17596,7 @@ Common: Spacing Gutters
   padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
+  margin-right: 27px;
 }
 .team-info-section{
   border-radius: 8px;
