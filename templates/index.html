@@ -233,29 +233,7 @@
 																</div>
 															
 														</div>
-														<script>
-															document.addEventListener("DOMContentLoaded", function() {
-																const parentDiv = document.querySelector('.elementor-section');
 														
-																parentDiv.addEventListener('mouseenter', function() {
-																	const images = this.querySelectorAll('.wp-image-19, .wp-image-21');
-																	images.forEach(image => {
-																		const originalSrc = image.src;
-																		const hoverSrc = originalSrc.replace('.webp', '-full.webp'); // Replace with full-size image URL
-																		image.src = hoverSrc;
-																	});
-																});
-														
-																parentDiv.addEventListener('mouseleave', function() {
-																	const images = this.querySelectorAll('.wp-image-19, .wp-image-21');
-																	images.forEach(image => {
-																		const originalSrc = image.src;
-																		const normalSrc = originalSrc.replace('-full.webp', '.webp'); // Replace with normal-size image URL
-																		image.src = normalSrc;
-																	});
-																});
-															});
-														</script>
 													</div>
 												</div>
 											</div>

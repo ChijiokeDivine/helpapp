@@ -17650,8 +17650,11 @@ Common: Spacing Gutters
 }
 .elementor-container:hover .wp-image-19 {
   transform: translateX(-30px);
+  /* content: url(../images/); */
 }
 
 .elementor-container:hover .wp-image-21 {
   transform: translateX(30px);
+  /* content: url(../images/); */
 }
+
