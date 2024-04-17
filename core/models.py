@@ -2,8 +2,6 @@ from django.db import models
 from shortuuid.django_fields import ShortUUIDField
 from django.utils.html import mark_safe
 from django.contrib.auth.models import User
-from taggit.managers import TaggableManager
-from ckeditor_uploader.fields import RichTextUploadingField
 from django.utils.text import slugify
 from django.conf import settings
 import cloudinary
