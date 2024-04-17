@@ -1,5 +1,7 @@
 {% extends "partials/base.html" %}
 {% load static %}
+{% load cache %}
+{% load humanize %}
 {% block content %}
 			<div id="content" class="uicore-content">
 				<script id="uicore-page-transition">window.onload = window.onpageshow = function () { }; </script>
@@ -14,6 +16,7 @@
 									<div class="elementor-container elementor-column-gap-default">
 										<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-76df085"
 											data-id="76df085" data-element_type="column">
+											
 											<div class="elementor-widget-wrap elementor-element-populated">
 												
 												
@@ -26,14 +29,13 @@
 															data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" style="margin-bottom: 12px;">
 															
 																
-														
-																<img loading="lazy" decoding="async" style="width: 100%; border-radius: 8px; height: auto;"
+															
+																<img fetchpriority="high" decoding="async" style="width: 100%; border-radius: 8px; height: auto;"
 																	
-																	src="{% static 'img/dashboard.webp' %}" 
+																	src="{{blog.blog_page_image.url}}" 
 																	class="attachment-full size-full "
 																	alt 
 																	/>
-																
 														
 												
 														</div>
@@ -49,11 +51,11 @@
 													<div class="elementor-widget-container">
 														<div class="disp-flex">
 															<h2 class="elementor-heading-title elementor-size-default custom-h1-text" style="text-align: left; font-weight: 600;">
-																Dashboard Update
+																{{blog.blog_title}}
 															</h2>
 														<span style="display: flex; justify-content: center; align-items: center; margin-bottom: 6px;" class="custom-left-margin">	
 															<span style="width: 10px; height: 10px; background: #BF0303; border-radius: 50%; margin-right: 3px;"></span>
-															<span>2 mins ago</span>
+															<span>{{blog.date|timesince}} ago</span>
 														</span>
 														</div>
 													</div>
@@ -63,7 +65,7 @@
 													data-settings="{&quot;_animation&quot;:&quot;zoomOutUp&quot;,&quot;_animation_delay&quot;:450}"
 													data-widget_type="text-editor.default">
 													<div class="elementor-widget-container"  style="text-align: left; margin-bottom: 30px; font-weight: 300;">
-														Lorem ipsum dolor sit amet consectetur. Pellentesque id eget nibh ullamcorper nulla eget quam. Eu pellentesque semper facilisi quam ac sed iaculis vulputate sollicitudin. Velit ornare elit felis pretium at sed tristique felis. Ac proin scelerisque facilisis faucibus diam at elit. Egestas arcu non facilisis sapien amet. Sed eu lorem vitae vitae. Scelerisque nibh tristique tellus commodo. Nunc tortor enim nulla commodo ac enim pulvinar. Ipsum ornare elementum sollicitudin iaculis laoreet lectus. Quam orci nunc adipiscing nullam ridiculus malesuada. Quis mi arcu orci mauris amet quisque augue. Convallis pretium at urna risus sollicitudin. Condimentum sit imperdiet amet erat id. Vitae pretium sit porta eget consequat viverra ultrices. Venenatis est leo eget orci et. Dignissim vel sit lobortis sit nisl netus et amet. Quisque tellus nunc orci eu id tellus. Aliquet dolor mi id vel. Facilisis arcu vitae natoque nunc suspendisse pretium morbi suspendisse facilisis. Vel ac est egestas at neque sit sit. Sed odio maecenas faucibus gravida. Vitae rhoncus mi morbi porttitor. Nibh at amet velit risus vulputate penatibus pretium laoreet. Iaculis sapien quis laoreet in laoreet curabitur elementum leo dolor. Velit fermentum aliquet arcu pharetra aliquam nibh magna faucibus nulla. Cursus et quisque id duis turpis lacus. Id imperdiet dui amet commodo magna sit arcu sed. Donec auctor vitae sed suscipit consequat tortor faucibus tellus. Feugiat luctus justo sit facilisis consectetur ac quam. Ligula erat varius duis ridiculus semper turpis volutpat lacus faucibus. Amet vulputate amet euismod nunc turpis vulputate sit. Lectus interdum facilisis egestas suspendisse ultricies varius in consectetur maecenas. Sagittis pellentesque lacus scelerisque venenatis tristique proin id. Faucibus proin at tristique at lacinia adipiscing lectus ut mauris.
+														{{blog.description}}
 													</div>
 													<div style="text-align: left !important;">
 														<button class="help-app-btn animate-btn">Buy this IPAD</button>
@@ -72,10 +74,10 @@
 														<span style="display: flex;">
 															<p style="color: #000; font-weight: 600;" class="help-share-text">Share this post : </p>
 															<span style="display: flex; justify-content: center; align-items: center; margin-bottom: 14px;">
-																<a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com" target="_blank"><img src="{% static "images/facebook.png" %}" class="share-img"/></a>
-																<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://example.com" target="_blank"><img src="{% static "images/linkedin.png" %}" class="share-img"/></a>
-																<a href="https://twitter.com/intent/tweet?url=https://example.com" target="_blank"><img src="{% static "images/twitter.png" %}" class="share-img"/></a>
-																<a href="whatsapp://send?text=https://example.com" target="_blank"><img src="{% static "images/whatsapp.png" %}" class="share-img"/></a>
+																<a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank"><img src="{% static "images/facebook.png" %}" class="share-img"/></a>
+																<a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" target="_blank"><img src="{% static "images/linkedin.png" %}" class="share-img"/></a>
+																<a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}m" target="_blank"><img src="{% static "images/twitter.png" %}" class="share-img"/></a>
+																<a href="whatsapp://send?text={{ request.build_absolute_uri }}" target="_blank"><img src="{% static "images/whatsapp.png" %}" class="share-img"/></a>
 															</span>
 														</span>
 														

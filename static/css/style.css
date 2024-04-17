@@ -17168,6 +17168,16 @@ Common: Spacing Gutters
     }
     
 }
+@media only screen and (min-width: 770px) and (max-width: 950px) {
+  .line-through{
+    width: 60%;
+    
+  }
+  .help-app-copywright{
+    font-size: 14px;
+  }
+}
+
 
 @media (min-width: 768px) {
   .header-help-app-text{
@@ -17221,6 +17231,9 @@ Common: Spacing Gutters
   .small-text-egruhgj{
     font-size: 15px;
 
+  }
+  .no-disp-mobile{
+    display: none !important;
   }
   .custom-help-img{
     height: 70px !important;
@@ -17293,7 +17306,12 @@ Common: Spacing Gutters
   padding-left: 4px;
   padding-right: 4px;
 }
+.line-through{
+  height: 1px;
+  background-color: #fff;
+  width: 90%;
 
+}
 .help-app-column-50:hover{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -17356,8 +17374,23 @@ Common: Spacing Gutters
     margin-bottom: 0px !important;
     font-size: 20px !important;
   }
+  .padding-contact{
+    padding-top: 15px;
+  }
+  .help-app-copywright{
+    font-size: 14px;
+  }
+  .line-through{
+    width: 70%;
+  }
+  .no-disp-desktop{
+    display: none !important;
+  }
   .help-images-div-ghjksw{
     min-width: 100vw;
+  }
+  .no-padding-left{
+    padding-left: 0px !important;
   }
   .help-app-blog-link{
     font-size: 13px;
@@ -17572,7 +17605,7 @@ Common: Spacing Gutters
   font-weight: 600;
   text-align: left;
   color: #000;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
  
 }
 
@@ -17702,10 +17735,10 @@ Common: Spacing Gutters
 }
 
 .swiper-button-next:after{
-  transform: translateY(-20px);
+  transform: translateY(-60px);
 }
 
 .swiper-button-prev:after{
-  transform: translateY(-20px);
+  transform: translateY(-60px);
 
 }

@@ -1,5 +1,6 @@
 {% extends "partials/base.html" %}
 {% load static %}
+{% load cache %}
 {% block content %}
 			<div id="content" class="uicore-content">
 				<script id="uicore-page-transition">window.onload = window.onpageshow = function () { }; </script>
@@ -1021,6 +1022,9 @@
 													data-settings="{&quot;loop&quot;:true,&quot;speed&quot;:500,&quot;slidesPerView&quot;:1,&quot;slidesPerGroup&quot;:1,&quot;spaceBetween&quot;:20,&quot;effect&quot;:&quot;carousel&quot;,&quot;breakpoints&quot;:{&quot;767&quot;:{&quot;slidesPerView&quot;:2,&quot;spaceBetween&quot;:20,&quot;slidesPerGroup&quot;:1},&quot;1023&quot;:{&quot;slidesPerView&quot;:3,&quot;spaceBetween&quot;:20,&quot;slidesPerGroup&quot;:1}},&quot;navigation&quot;:{&quot;nextEl&quot;:&quot;#bdt-review-card-carousel-4de80bf .bdt-navigation-next&quot;,&quot;prevEl&quot;:&quot;#bdt-review-card-carousel-4de80bf .bdt-navigation-prev&quot;},&quot;pagination&quot;:{&quot;el&quot;:&quot;#bdt-review-card-carousel-4de80bf .swiper-pagination&quot;,&quot;type&quot;:&quot;bullets&quot;,&quot;clickable&quot;:&quot;true&quot;,&quot;dynamicBullets&quot;:false},&quot;scrollbar&quot;:{&quot;el&quot;:&quot;#bdt-review-card-carousel-4de80bf .swiper-scrollbar&quot;,&quot;hide&quot;:&quot;true&quot;},&quot;coverflowEffect&quot;:{&quot;rotate&quot;:50,&quot;stretch&quot;:0,&quot;depth&quot;:100,&quot;modifier&quot;:1,&quot;slideShadows&quot;:true}}">
 													<div class="swiper-carousel swiper">
 														<div class="swiper-wrapper">
+															{% cache 600 blogs_cache_key %}
+															{% for b in blogs %}
+															
 															<div
 																class="bdt-ep-review-card-carousel-item swiper-slide" style="padding: 10px;">
 																<style>
@@ -1028,121 +1032,35 @@
 																</style>
 																<div
 																	class=" bdt-image-mask">
-																	<a href="{% url "core:blog-detail" %}">
+																	<a href="{% url "core:blog-detail" b.bid %}">
 																	<img loading="lazy" decoding="async"
 																		width="330" height="200" style="border-radius: 8px; width: 100% !important;"
-																		src="{% static 'img/dashboard.webp' %}"
+																		src="{{b.blog_page_image.url}}"
 																		class="attachment-medium size-medium"
-																		alt="Dashboard Update" />
+																		alt="{{b.blog_title}}" />
 																	</a>
 																</div>
 																<div
 																	class="bdt-ep-review-card-carousel-content">
-																	<a href="{% url "core:blog-detail" %}">
+																	<a href="{% url "core:blog-detail" b.bid %}">
 																	<h3
 																		class="bdt-ep-review-card-carousel-name" style="padding-top: 20px;">
-																		Dashboard Update </h3>
+																		{{b.blog_title}}</h3>
 																	</a>
 																
 																	<div
 																		class="bdt-ep-review-card-carousel-text help-text">
-																		In our relentless pursuit of enhancing your experience, we are thrilled to announce a significant update to our dashboard – your central hub for seamless navigation and control. This update is more than just a facelift; it's a leap forward into a more intuitive, efficient, and user-friendly realm. Let's take a closer look at what's in store.
+																		{{b.description|truncatechars:300}}
 																	</div>
-																	<a href="" class="help-app-blog-link"><span class="button-content">Read More Here</span>
+																	<a href="{% url "core:blog-detail" b.bid %}" class="help-app-blog-link"><span class="button-content">Read More Here</span>
 																		<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M3 12H21M21 12L14 5M21 12L14 19" stroke="#9b29b2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 																		</svg>
 																	</a>
 																</div>
 															</div>
-															<div
-																class="bdt-ep-review-card-carousel-item swiper-slide" style="padding: 10px;">
-																<div
-																	class=" bdt-image-mask">
-																	<a href="{% url "core:blog-detail" %}">
-																	<img loading="lazy" decoding="async"
-																	width="330" height="200" style="border-radius: 8px; width: 100% !important;"
-																		src="{% static 'img/dashboard.webp' %}"
-																		class="attachment-medium size-medium"
-																		alt="Dashboard Update" />
-																	</a>
-																</div>
-																<div
-																	class="bdt-ep-review-card-carousel-content">
-																	<a href="{% url "core:blog-detail" %}">
-																	<h3
-																		class="bdt-ep-review-card-carousel-name" style="padding-top: 20px;">
-																		Dashboard Update </h3>
-																	</a>
-																	<div
-																		class="bdt-ep-review-card-carousel-text help-text">
-																		In our relentless pursuit of enhancing your experience, we are thrilled to announce a significant update to our dashboard – your central hub for seamless navigation and control. This update is more than just a facelift; it's a leap forward into a more intuitive, efficient, and user-friendly realm. Let's take a closer look at what's in store.
-																	</div>
-																	<a href="" class="help-app-blog-link"><span class="button-content">Read More Here</span>
-																		<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M3 12H21M21 12L14 5M21 12L14 19" stroke="#9b29b2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																		</svg>
-																	</a>
-																</div>
-															</div>
-															<div
-																class="bdt-ep-review-card-carousel-item swiper-slide" style="padding: 10px;">
-																<div
-																	class=" bdt-image-mask">
-																	<a href="{% url "core:blog-detail" %}">
-																	<img loading="lazy" decoding="async"
-																	width="330" height="200" style="border-radius: 8px; width: 100% !important;"
-																		src="{% static 'img/dashboard.webp' %}"
-																		class="attachment-medium size-medium"
-																		alt="Dashboard Update" />
-																	</a>
-																</div>
-																<div
-																	class="bdt-ep-review-card-carousel-content">
-																	<a href="{% url "core:blog-detail" %}">
-																	<h3
-																		class="bdt-ep-review-card-carousel-name" style="padding-top: 20px;">
-																		Dashboard Update </h3>
-																	</a>
-																
-																	<div
-																		class="bdt-ep-review-card-carousel-text help-text">
-																		In our relentless pursuit of enhancing your experience, we are thrilled to announce a significant update to our dashboard – your central hub for seamless navigation and control. This update is more than just a facelift; it's a leap forward into a more intuitive, efficient, and user-friendly realm. Let's take a closer look at what's in store.
-																	</div>
-																	<a href="" class="help-app-blog-link"><span class="button-content">Read More Here</span>
-																		<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M3 12H21M21 12L14 5M21 12L14 19" stroke="#9b29b2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																		</svg>
-																	</a>
-																</div>
-															</div>
-															<div
-																class="bdt-ep-review-card-carousel-item swiper-slide" style="padding: 10px;">
-																<div
-																	class=" bdt-image-mask">
-																	<img loading="lazy" decoding="async"
-																	width="330" height="200" style="border-radius: 8px; width: 100% !important;"
-																		src="{% static 'img/dashboard.webp' %}"
-																		class="attachment-medium size-medium"
-																		alt="Dashboard Update" />
-																</div>
-																<div
-																	class="bdt-ep-review-card-carousel-content">
-																	<h3
-																		class="bdt-ep-review-card-carousel-name" style="padding-top: 20px;">
-																		Dashboard Update</h3>
-																	
-																	<div
-																		class="bdt-ep-review-card-carousel-text help-text">
-																		In our relentless pursuit of enhancing your experience, we are thrilled to announce a significant update to our dashboard – your central hub for seamless navigation and control. This update is more than just a facelift; it's a leap forward into a more intuitive, efficient, and user-friendly realm. Let's take a closer look at what's in store.
-																	</div>
-																	<a href="" class="help-app-blog-link"><span class="button-content">Read More Here</span>
-																		<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M3 12H21M21 12L14 5M21 12L14 19" stroke="#9b29b2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-																		</svg>
-																	</a>
-																</div>
-															</div>
+															{% endfor %}
+															{% endcache %}
 														</div>
 														<div class="swiper-button-prev bdt-navigation-prev"></div>
     													<div class="swiper-button-next bdt-navigation-next"></div>

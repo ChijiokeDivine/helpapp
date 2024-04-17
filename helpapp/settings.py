@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
+    "django.contrib.humanize",
     "core"
 ]
 
@@ -139,3 +139,7 @@ else:
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CLOUD_NAME = "dwefecwja"
+API_KEY = "918526861367316"
+API_SECRET = "HQIxPKZZUdVz0IaFM71c3dhP9bw" 

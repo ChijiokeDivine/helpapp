@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from core.models import WaitlistEmail
-from core.forms import WaitlistForm
+from core.models import WaitlistEmail, Blog
+from core.forms import WaitlistForm, ContactForm
 from django.contrib import messages
 from django.http import JsonResponse
 import threading
@@ -11,7 +11,11 @@ def send_email_async(email_data):
     resend.Emails.send(email_data)
 
 def index(request):
-    return render(request, "index.html")
+    blogs = Blog.objects.all().order_by('-id')[:5]
+    context = {
+        "blogs":blogs,
+    }
+    return render(request, "index.html", context)
 
 
 
@@ -117,13 +121,33 @@ def success(request):
 def about(request):
     return render(request, "about.html")
 
+from django.http import JsonResponse
+
 def contact(request):
-    return render(request, "contact.html")
+    if request.method == "POST" and request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest':
+        form = ContactForm(request.POST or None)
+        if form.is_valid():
+            form.save()
+            return JsonResponse({'success': True, 'message': "Message sent successfully"})
+        else:
+            errors = form.errors.as_json()
+            return JsonResponse({'success': False, 'errors': errors})
+    else:
+        # Handle non-AJAX requests here
+        form = ContactForm()
+        context = {'form': form}
+        return render(request, "contact.html", context)
+
 
 
 def team(request):
     return render(request, "team.html")
 
-def blog_detail(request):
-    return render(request, "blog-detail.html")
+def blog_detail(request, bid):
+    blog_bid = bid
+    blog = Blog.objects.get(bid=blog_bid)
+    context = {
+        "blog": blog,
+    }
+    return render(request, "blog-detail.html", context)
 
