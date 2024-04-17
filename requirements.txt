@@ -7,3 +7,4 @@ Pillow==9.4.0
 django-pipeline==2.1.0
 pytz==2022.7
 resend==0.6.0
+sqlparse>=0.5.0 # not directly required, pinned by Snyk to avoid a vulnerability
