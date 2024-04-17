@@ -17213,7 +17213,7 @@ Common: Spacing Gutters
     font-size: 30px !important;
   }
   .help-smaller-text{
-    font-size: 15px !important;
+    font-size: 16px !important;
   }
   .disp-flex{
     display: flex;
@@ -17248,6 +17248,12 @@ Common: Spacing Gutters
   .elementor-12 .elementor-element.elementor-element-4937059{
     padding: 0px 0px 0px 0px !important;
   }
+  .help-app-column-50{
+    margin-right: 0px;
+  }
+  .custom-margin-help-app-ert{
+    margin-bottom: 70px;
+  }
 }
 .help-app-blog-link{
   padding: 10px;
@@ -17259,6 +17265,16 @@ Common: Spacing Gutters
   margin-top: 10px;
   margin-bottom: 5px;
   color: #9b29b2 !important;
+  transition: background-color 0.5s ease;
+}
+.help-app-blog-link:hover{
+  background-color: #f5eaf7;
+}
+.help-app-blog-link svg{
+  transition: transform 0.5s ease;
+}
+.help-app-blog-link:hover svg{
+  transform:rotateZ(-45deg);
 }
 .hover-on-image{
   transition: box-shadow 0.5s ease;
@@ -17340,6 +17356,9 @@ Common: Spacing Gutters
     margin-bottom: 0px !important;
     font-size: 20px !important;
   }
+  .help-images-div-ghjksw{
+    min-width: 100vw;
+  }
   .help-app-blog-link{
     font-size: 13px;
   }
@@ -17353,6 +17372,10 @@ Common: Spacing Gutters
     font-size: 10px !important;
     padding: 4px 2px;
     
+  }
+  .black-left-padding{
+    padding-top: 30px;
+    padding-bottom: 10px;
   }
   .help-app-outline-side{
     border-left: 0px solid #E6E6E6;
@@ -17407,7 +17430,7 @@ Common: Spacing Gutters
     margin-bottom: 5px;
   }
   .help-smaller-text{
-    font-size: 12px !important;
+    font-size: 13px !important;
   }
   .small-text-egruh{
     font-size: 24px !important;
@@ -17471,6 +17494,7 @@ Common: Spacing Gutters
   border-radius: 5px;
   border: 1px solid #9C28B1;
   font-size: 15px;
+  transition: background-color 0.5s ease;
 }
 .help-app-header-rounded{
   background-color: #E0BCE7;
@@ -17490,7 +17514,7 @@ Common: Spacing Gutters
   font-size: 16px;
   padding: 10px;
   margin-left: 0px;
-  margin-right: 0px;
+  margin-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: #F6F7F9;
@@ -17514,9 +17538,14 @@ Common: Spacing Gutters
   cursor: pointer;
   font-size: 12px;
   border: 1px solid #E6E6E6;
+  transition: background-color 0.5s ease;
 }
 .toggle-button.active{
   background-color: #9C28B1;
+  color: #fff;
+}
+.toggle-button:hover{
+  background-color:  #9C28B1;
   color: #fff;
 }
 
@@ -17657,12 +17686,26 @@ Common: Spacing Gutters
     transition: transform 0.5s ease; /* Add transition to both images */
 }
 .elementor-container:hover .wp-image-19 {
-  transform: translateX(-30px);
+  transform: translateX(-12px);
   /* content: url(../images/); */
 }
 
 .elementor-container:hover .wp-image-21 {
-  transform: translateX(30px);
+  transform: translateX(12px);
   /* content: url(../images/); */
 }
 
+
+.animate-btn:hover{
+  background-color: #561661;
+  border: 1px solid #561661;
+}
+
+.swiper-button-next:after{
+  transform: translateY(-20px);
+}
+
+.swiper-button-prev:after{
+  transform: translateY(-20px);
+
+}
