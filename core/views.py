@@ -128,6 +128,62 @@ def contact(request):
         form = ContactForm(request.POST or None)
         if form.is_valid():
             form.save()
+            email = form.cleaned_data.get("email")
+            full_name = form.cleaned_data.get("full_name")
+            email_data = {
+                "from": "HelpApp <hello@helpappafrica.com>",
+                "to": email,
+                "subject": "We have gotten your message",
+                "html": f"""
+                    <!DOCTYPE html>
+                    <html lang="en">
+                   
+                    <body>
+                        <div class="container">
+                            <td align="center" valign="top" bgcolor="#ffffff" style="border-radius:5px;border-left:1px solid #e0bce7;border-top:1px solid #e0bce7;border-right:1px solid #efefef;border-bottom:1px solid #efefef">
+        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td valign="top" align="center" style="font-family:Google Sans,Roboto,Helvetica,Arial sans-serif;font-size:36px;font-weight:500;line-height:44px;color:#202124;padding:40px 40px 0px 40px;letter-spacing:-0.31px">
+              <img src="https://helpappafrica.com/static/images/help-logo-removebg-preview.webp" style="border-radius: 15px;" height="200"/>
+                </td>
+            </tr>
+            
+            <tr>
+              <td valign="top" align="center" style="font-family:Google Sans,Roboto,Helvetica,Arial sans-serif;font-size:36px;font-weight:500;height:44px;color:#202124;padding:40px 40px 0px 40px;letter-spacing:-0.31px">
+              
+                Hello <span class="il">{full_name}</span>!</td>
+            </tr>
+            
+
+            
+            <tr>
+              <td valign="top" align="left" style="font-family:Roboto,Helvetica,Arial sans-serif;font-size:14px;line-height:24px;color:#414347;padding:40px 40px 20px 40px">
+              We have received your <span class="il">message </span><br> We'll get back to you soon.</td>
+            </tr>
+            
+            
+            <tr>
+              <td valign="top" align="left" style="font-family:Roboto,Helvetica,Arial sans-serif;font-size:14px;line-height:24px;color:#414347;padding:20px 20px 0px 40px">
+                Thanks for reaching out to us</td>
+            </tr>
+            <tr>
+              <td valign="top" align="left" style="font-family:Roboto,Helvetica,Arial sans-serif;font-size:14px;line-height:24px;color:#414347;padding:10px 40px 40px 40px">
+                Help App team</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </td>
+                        </div>
+                    </body>
+                    </html>
+                """,
+            }
+
+            # Create a thread to send the email asynchronously
+            email_thread = threading.Thread(target=send_email_async, args=(email_data,))
+            email_thread.start()
             return JsonResponse({'success': True, 'message': "Message sent successfully"})
         else:
             errors = form.errors.as_json()

@@ -34,14 +34,21 @@ $(document).ready(function(){
 
             $.ajax({
                 type: 'POST',
-                url: '/contact/', 
+                url: '/contact', 
                 data: $(this).serialize(),
                 success: function(response) {
                     if (response.success) {
-                        errorMessage.text('Your message has been successfully received');
-                        setTimeout(() => {
-                            errorMessage.text("");
-                        }, 5000);
+                        
+                        function showNotification() {
+                            var notification = document.getElementById("notification");
+                            notification.style.display = "block";
+                            
+                            setTimeout(function() {
+                                notification.style.display = "none";
+                            }, 3000); 
+                        }
+                        showNotification();
+                      
                     } else {
                         // Submit failure
                         const errorObj = JSON.parse(response.errors);
