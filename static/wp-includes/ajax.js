@@ -68,3 +68,55 @@ function isValidEmailAddress(email) {
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
+
+
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting){
+            entry.target.classList.add('visible-link');
+        }
+        // else{
+        //     entry.target.classList.remove('visible-link');
+        // }
+    });
+  });
+const observerer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting){
+            entry.target.classList.add('visible-link');
+        }
+       
+    });
+  });
+const observ = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting){
+            entry.target.classList.add('visible-link');
+        }
+       
+    });
+  });
+const obser = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+  
+        if (entry.isIntersecting){
+            entry.target.classList.add('visible-link');
+        }
+       
+    });
+  });
+  
+  const hiddenElements = document.querySelectorAll("[show]");
+  hiddenElements.forEach((el) => observer.observe(el));
+  const hiddenElement = document.querySelectorAll("[see]");
+  hiddenElement.forEach((el) => observerer.observe(el));
+  const hiddenElemen = document.querySelectorAll("[goLeft]");
+  hiddenElemen.forEach((el) => observ.observe(el));
+  
+  const hiddenEleme = document.querySelectorAll("[goRight]");
+  hiddenEleme.forEach((el) => obser.observe(el));
+  
+  
+  
+  

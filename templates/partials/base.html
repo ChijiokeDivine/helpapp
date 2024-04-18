@@ -22,9 +22,10 @@
 		href="{% static 'wp-content/plugins/bdthemes-element-pack/assets/css/bdt-uikitf14a.css' %}" media="all" />
 	<link rel="stylesheet" href="{% static 'css/style.css' %}"  />
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"  />
+
 	<link rel="stylesheet" id="ep-helper-css"
 		href="{% static 'wp-content/plugins/bdthemes-element-pack/assets/css/ep-helperca3f.css' %}" media="all" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></>
 
 	<style id="wp-emoji-styles-inline-css">
 		img.wp-smiley,
@@ -100,12 +101,12 @@
 
 
 	<meta name="theme-color" content="#aa49bd" />
-	<link rel="shortcut icon" href="{% static "favicon_io/apple-touch-icon.png" %}">
-	<link rel="icon" href="{% static "favicon_io/apple-touch-icon.png" %}">
-	<link rel="apple-touch-icon" sizes="180x180" href="{% static "favicon_io/apple-touch-icon.png" %}">
-	<link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon_io/favicon-32x32.png" %}">
-	<link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon_io/favicon-16x16.png" %}">
-	<link rel="manifest" href="{% static "favicon_io/site.webmanifest" %}">
+	<link rel="shortcut icon" href="{% static 'favicon_io/apple-touch-icon.png' %}">
+	<link rel="icon" href="{% static 'favicon_io/apple-touch-icon.png' %}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon_io/apple-touch-icon.png' %}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon_io/favicon-32x32.png' %}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon_io/favicon-16x16.png' %}">
+	<link rel="manifest" href="{% static 'favicon_io/site.webmanifest' %}">
     <script async src="https://basicons.xyz/embed.js"> </script>
 </head>
 
@@ -331,8 +332,8 @@
                                                         <div class="elementor-element elementor-element-794d12a elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                                                 data-id="794d12a" data-element_type="widget"
                                                                 data-widget_type="icon-list.default">
-                                                            <div class="elementor-widget-container" style="text-align: left; color: #fff; font-size: 16px !important;">
-                                                                Sign up to receive or weekly newsletter about new and trending discount offers
+                                                            <div class="elementor-widget-container" style="text-align: left; font-size: 16px !important;">
+                                                               <span class="elementor-icon-list-text"> Sign up to receive or weekly newsletter about new and trending discount offers</span>
                                                             </div>
                                                         </div>
                                                         <div class="input-group disp-flex">
@@ -394,15 +395,15 @@
                     
                     
                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6" style="padding-top: 13px; padding-bottom: 13px; border: 1px solid #F5EAF7; margin-top: 10px;"><a
-                        href="{% url "core:team" %}"><span class="ui-menu-item-wrapper">Meet the Team</span></a></li>
+                        href="{% url 'core:team' %}"><span class="ui-menu-item-wrapper">Meet the Team</span></a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7" style="padding-top: 13px; padding-bottom: 13px; border: 1px solid #F5EAF7;"><a
-                        href="{% url "core:about" %}"><span class="ui-menu-item-wrapper">About Us</span></a></li>
+                        href="{% url 'core:about' %}"><span class="ui-menu-item-wrapper">About Us</span></a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8" style="padding-top: 13px; padding-bottom: 13px; border: 1px solid #F5EAF7;"><a
-                        href="{% url "core:contact" %}"><span class="ui-menu-item-wrapper">Contact Us</span></a></li>
+                        href="{% url 'core:contact' %}"><span class="ui-menu-item-wrapper">Contact Us</span></a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9" style="background: #F5EAF7; font-weight: 400; padding-top: 13px; padding-bottom: 13px; border: 1px solid #F5EAF7;">
                     <a href="#">
                         <span class="ui-menu-item-wrapper" style="display: flex; font-size: 20px;">
-                            <img src="{% static "images/youtube.png" %}" style="width: 25px; height: 25px; margin-right: 8px; "  />Youtube Video
+                            <img src="{% static 'images/youtube.png' %}" style="width: 25px; height: 25px; margin-right: 8px; "  />Youtube Video
                         </span>
                     </a>
                 </li>
@@ -413,13 +414,13 @@
             <div class="uicore uicore-extra" data-uils="header_extra" data-uils-title="Header Extras">
                 <div class="" style="margin-bottom: 15px;">
                     <a href="#" target="_self" class=" " style="">
-                        <img src="{% static "images/Google-Play.webp" %}" style="border-radius: 8px; width: 250px; height: 75px;" />
+                        <img src="{% static 'images/Google-Play.webp' %}" style="border-radius: 8px; width: 250px; height: 75px;" />
                             
                     </a>
                 </div>
                 <div class="">
                     <a href="#" target="_self" class=" " style="">
-                        <img src="{% static "images/App-Store.webp" %}" style="border-radius: 8px; width: 250px; height: 75px;" />
+                        <img src="{% static 'images/App-Store.webp' %}" style="border-radius: 8px; width: 250px; height: 75px;" />
                             
                     </a>
                 </div>
@@ -463,7 +464,7 @@
 </script>
 <script src="{% static 'wp-content/plugins/elementor/assets/js/frontend.min225e.js' %}"
     id="elementor-frontend-js"></script>
-<script src="{% static "wp-includes/ajax.js" %}"></script>
+<script src="{% static 'wp-includes/ajax.js' %}"></script>
 <script src="{% static 'wp-content/plugins/bdthemes-element-pack/assets/js/modules/ep-advanced-icon-box.minca3f.js' %}"
     id="ep-advanced-icon-box-js"></script>
 <script src="{% static 'wp-content/plugins/bdthemes-element-pack/assets/js/modules/ep-wrapper-link.minca3f.js' %}"

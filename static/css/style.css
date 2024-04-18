@@ -17184,6 +17184,19 @@ Common: Spacing Gutters
     font-size: 13px !important;
     padding: 15px 11px;
   }
+  .elementor-section .wp-image-19,
+  .elementor-section .wp-image-21 {
+      transition: transform 0.5s ease; /* Add transition to both images */
+  }
+  .elementor-container:hover .wp-image-19 {
+    transform: translateX(-12px);
+    /* content: url(../images/); */
+  }
+
+  .elementor-container:hover .wp-image-21 {
+    transform: translateX(12px);
+    /* content: url(../images/); */
+  }
 
   .help-img-info-text{
     font-size: 24px;
@@ -17381,8 +17394,9 @@ Common: Spacing Gutters
     font-size: 14px;
   }
   .line-through{
-    width: 70%;
+    width: 60%;
   }
+
   .no-disp-desktop{
     display: none !important;
   }
@@ -17714,19 +17728,7 @@ Common: Spacing Gutters
   margin-bottom: 30px; 
   font-weight: 500;
 }
-.elementor-section .wp-image-19,
-.elementor-section .wp-image-21 {
-    transition: transform 0.5s ease; /* Add transition to both images */
-}
-.elementor-container:hover .wp-image-19 {
-  transform: translateX(-12px);
-  /* content: url(../images/); */
-}
 
-.elementor-container:hover .wp-image-21 {
-  transform: translateX(12px);
-  /* content: url(../images/); */
-}
 
 
 .animate-btn:hover{
