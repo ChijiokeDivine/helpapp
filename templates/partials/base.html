@@ -22,7 +22,7 @@
 		href="{% static 'wp-content/plugins/bdthemes-element-pack/assets/css/bdt-uikitf14a.css' %}" media="all" />
 	<link rel="stylesheet" href="{% static 'css/style.css' %}"  />
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"  />
-
+    <script src="{% static "wp-includes/js/htmx.min.js" %}"></script>
 	<link rel="stylesheet" id="ep-helper-css"
 		href="{% static 'wp-content/plugins/bdthemes-element-pack/assets/css/ep-helperca3f.css' %}" media="all" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></>
@@ -107,11 +107,70 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon_io/favicon-32x32.png' %}">
 	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon_io/favicon-16x16.png' %}">
 	<link rel="manifest" href="{% static 'favicon_io/site.webmanifest' %}">
-   
+    <style>
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #9c28b1;
+            transition: width 0.4s ease;
+            z-index: 1000;
+            display: none;
+        }
+      </style>
 </head>
 
 <body
 	class="home page-template-default page page-id-12 wp-embed-responsive ui-a-dsmm-slide  elementor-default elementor-kit-4 elementor-page elementor-page-12">
+    <div id="progress-bar"></div>
+
+    <script>
+        // Function to show the progress bar
+        function showProgressBar() {
+            var progressBar = document.getElementById('progress-bar');
+            progressBar.style.display = 'block';
+            setTimeout(() => { // Allow transition to work
+                progressBar.style.width = '50%';
+            }, 10);
+        }
+    
+        // Function to update the progress bar to full width
+        function updateProgressBar() {
+            var progressBar = document.getElementById('progress-bar');
+            progressBar.style.width = '100%';
+        }
+    
+        // Function to hide the progress bar
+        function hideProgressBar() {
+            var progressBar = document.getElementById('progress-bar');
+            setTimeout(function() {
+                progressBar.style.display = 'none';
+                progressBar.style.width = '0';
+            }, 500); // Delay to let the user see the progress completion
+        }
+    
+        // Event listeners for HTMX events
+        document.addEventListener('htmx:configRequest', function (event) {
+            showProgressBar();
+        });
+    
+        document.addEventListener('htmx:beforeOnLoad', function (event) {
+            updateProgressBar();
+        });
+    
+        document.addEventListener('htmx:afterOnLoad', function (event) {
+            hideProgressBar();
+        });
+    
+        // Reset progress bar on page load to handle back navigation correctly
+        window.addEventListener('pageshow', function (event) {
+            var progressBar = document.getElementById('progress-bar');
+            progressBar.style.display = 'none';
+            progressBar.style.width = '0';
+        });
+    </script>
 	<div class="uicore-body-content">
 		<div id="uicore-page">
 			<div data-uils="header" data-uils-title="Header" id="wrapper-navbar" itemscope
@@ -141,11 +200,11 @@
 									
 									
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a
-											href="{% url 'core:team' %}"><span class="ui-menu-item-wrapper">Meet the Team</span></a></li>
+											href="{% url 'core:team' %}" hx-boost="true"><span class="ui-menu-item-wrapper">Meet the Team</span></a></li>
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a
-											href="{% url 'core:about' %}"><span class="ui-menu-item-wrapper">About Us</span></a></li>
+											href="{% url 'core:about' %}" hx-boost="true"><span class="ui-menu-item-wrapper">About Us</span></a></li>
 									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a
-											href="{% url 'core:contact' %}"><span class="ui-menu-item-wrapper">Contact Us</span></a></li>
+											href="{% url 'core:contact' %}" hx-boost="true"><span class="ui-menu-item-wrapper">Contact Us</span></a></li>
 								</ul>
 							</div>
 							<div class="uicore uicore-extra" data-uils="header_extra" data-uils-title="Header Extras">
@@ -395,11 +454,11 @@
                     
                     
                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6" style="padding-top: 13px; padding-bottom: 13px; border: 1px solid #F5EAF7; margin-top: 10px;"><a
-                        href="{% url 'core:team' %}"><span class="ui-menu-item-wrapper">Meet the Team</span></a></li>
+                        href="{% url 'core:team' %}" hx-boost="true"><span class="ui-menu-item-wrapper">Meet the Team</span></a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7" style="padding-top: 13px; padding-bottom: 13px; border: 1px solid #F5EAF7;"><a
-                        href="{% url 'core:about' %}"><span class="ui-menu-item-wrapper">About Us</span></a></li>
+                        href="{% url 'core:about' %}" hx-boost="true"><span class="ui-menu-item-wrapper">About Us</span></a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8" style="padding-top: 13px; padding-bottom: 13px; border: 1px solid #F5EAF7;"><a
-                        href="{% url 'core:contact' %}"><span class="ui-menu-item-wrapper">Contact Us</span></a></li>
+                        href="{% url 'core:contact' %}" hx-boost="true"><span class="ui-menu-item-wrapper">Contact Us</span></a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9" style="background: #F5EAF7; font-weight: 400; padding-top: 13px; padding-bottom: 13px; border: 1px solid #F5EAF7;">
                     <a href="#">
                         <span class="ui-menu-item-wrapper" style="display: flex; font-size: 20px;">
