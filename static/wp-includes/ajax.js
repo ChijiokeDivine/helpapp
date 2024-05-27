@@ -12,8 +12,7 @@ $(document).ready(function(){
         if (fullName.trim() === '') {
             errorMessage.text('Please enter your full name.');
             isValid = false;
-        }
-
+        } 
         // Validate email address
         else if (email.trim() === '') {
             errorMessage.text('Please enter your email address.');
@@ -21,8 +20,7 @@ $(document).ready(function(){
         } else if (!isValidEmailAddress(email)) {
             errorMessage.text('Please enter a valid email address.');
             isValid = false;
-        }
-
+        } 
         // Validate message
         else if (message.trim() === '') {
             errorMessage.text('Please enter your message or enquiry.');
@@ -38,17 +36,7 @@ $(document).ready(function(){
                 data: $(this).serialize(),
                 success: function(response) {
                     if (response.success) {
-                        
-                        function showNotification() {
-                            var notification = document.getElementById("notification");
-                            notification.style.display = "block";
-                            
-                            setTimeout(function() {
-                                notification.style.display = "none";
-                            }, 3000); 
-                        }
                         showNotification();
-                      
                     } else {
                         // Submit failure
                         const errorObj = JSON.parse(response.errors);
@@ -68,62 +56,39 @@ $(document).ready(function(){
             });
         }
     });
+
+    function showNotification() {
+        var notification = document.getElementById("notification");
+        notification.style.display = "block";
+        
+        setTimeout(function() {
+            notification.style.display = "none";
+        }, 3000); 
+    }
+
+    function isValidEmailAddress(email) {
+        // Regular expression for email validation
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // IntersectionObservers
+    const observerOptions = {
+        threshold: 0.1 // Adjust as needed
+    };
+
+    const handleIntersect = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible-link');
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, observerOptions);
+
+    document.querySelectorAll("[show]").forEach((el) => observer.observe(el));
+    document.querySelectorAll("[see]").forEach((el) => observer.observe(el));
+    document.querySelectorAll("[goLeft]").forEach((el) => observer.observe(el));
+    document.querySelectorAll("[goRight]").forEach((el) => observer.observe(el));
 });
-
-function isValidEmailAddress(email) {
-    // Regular expression for email validation
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting){
-            entry.target.classList.add('visible-link');
-        }
-        // else{
-        //     entry.target.classList.remove('visible-link');
-        // }
-    });
-  });
-const observerer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting){
-            entry.target.classList.add('visible-link');
-        }
-       
-    });
-  });
-const observ = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting){
-            entry.target.classList.add('visible-link');
-        }
-       
-    });
-  });
-const obser = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-  
-        if (entry.isIntersecting){
-            entry.target.classList.add('visible-link');
-        }
-       
-    });
-  });
-  
-  const hiddenElements = document.querySelectorAll("[show]");
-  hiddenElements.forEach((el) => observer.observe(el));
-  const hiddenElement = document.querySelectorAll("[see]");
-  hiddenElement.forEach((el) => observerer.observe(el));
-  const hiddenElemen = document.querySelectorAll("[goLeft]");
-  hiddenElemen.forEach((el) => observ.observe(el));
-  
-  const hiddenEleme = document.querySelectorAll("[goRight]");
-  hiddenEleme.forEach((el) => obser.observe(el));
-  
-  
-  
-  
