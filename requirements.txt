@@ -9,3 +9,4 @@ django-pipeline==2.1.0
 pytz==2022.7
 resend==0.6.0
 cloudinary==1.39.0
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
